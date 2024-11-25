@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --pryColor:rgb(56,71,12);
+  --secColor:rgb(201,177,85);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --pryColor:rgb(201,177,85);
+    --secColor:  rgb(56,71,12);
+  }
+}
+
+body {
+  color: var(--pryColor);
+  background: color-mix(in srgb, var(--secColor), white 60%);
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+a:hover {
+  text-decoration: underline;
+
+}
+ 
+.hero{
+  background-image: url('../../public/heroImage.jpg');
+  height: 50vh;
+  background-size: cover;
+  background-position:center;
+  background-repeat: no-repeat;
+  position: relative;
+  color:var(--secColor);
+  margin-bottom:20px;
+  box-shadow: 3px 3px 2px var(--pryColor);
+}
+.hero h2{
+  text-shadow: 0 0 5px var(--secColor);
+
+}
+h1{
+  font-size: 3.5em;
+  font-weight: bolder;
+  width: fit-content;
+  margin: 0 auto;
+  background-color: var(--pryColor);
+}
+.text{
+  width: fit-content;
+  padding:18px 20px;
+  margin:0 auto;
+  background-color: rgba(255, 255, 255, 0.211);
+  backdrop-filter: blur(2px);
+}
+.text p{
+  text-shadow: 0 0 4px black;
+  max-width: 500px;
+  border-radius: 18px;
+}
+/*  */
+
+.hero__button:active{
+  box-shadow: inset 2px 2px 5px var(--secColor);
+  
+}
+.hero__button:hover{
+  
+  color:color-mix(in srgb, var(--secColor ) 60%, green 40%)
+}
+h2
+  {
+    font-size: 1.5rem /* 24px */;
+    line-height: 2rem ;
+    margin: 0.75rem ;
+    text-align: center;
+    margin: 0.75rem /* 12px */;
+    font-weight: bold;
+}
+.service__image{
+  max-width: 33%;
+  display:flex;
+  margin-inline:auto;
+}
+
+.service__image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* button{
+  margin-block:20px;
+} */
+
